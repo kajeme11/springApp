@@ -1,0 +1,29 @@
+SPRING FRAMEWORK
+
+-Decouples classes
+classes can become less dependent on each other by
+using dependency injection instead of extending pr
+initializing objects inside the business logic
+Interfaces can help achieve loosely coupled
+classes
+
+* SpringFramework main feature:
+- Dependency Injection, core feature to develop loose coupled apps (IOC)
+- Java Enterprise Development framework
+
+* Layered Approach:
+- Web Layer (Controller, servlet), responds to http requests
+- Service Layer (Busines logic)
+- Persistance Layer (DAO, intereact with db), uses JDBC or JPA Hibernate
+
+* Spring is a versitile framework, you can use many different
+modules to develop an end to end app
+modules such as spring web, jpa, aop, security
+
+* Spring core module
+-BeanFactory, Application Context
+-IOC, DI using Xml, annotations, Autowire
+
+
+
+
