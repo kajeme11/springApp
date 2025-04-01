@@ -24,6 +24,7 @@ modules such as spring web, jpa, aop, security
 -BeanFactory, Application Context
 -IOC, DI using Xml, annotations, Autowire
 
-
+configuration xml file will create beans and pass the
+to IOC container to manage
 
 
