@@ -9,8 +9,15 @@
    to IOC container to manage-->
 <!-- SpringFramework Create an instance of TargetCourse
   if id is not given referenced will be targetCourse -->
-    <bean id="tc" class="com.springApp.proj.service.TargetCourse" />
-    <bean id="jc" class="com.springApp.proj.service.courses.JavaCourse" />
     <bean id="sc" class="com.springApp.proj.service.courses.SpringCourse" />
+    <bean id="jc" class="com.springApp.proj.service.courses.JavaCourse" />
+    <bean id="tc" class="com.springApp.proj.service.TargetCourse">
+<!-- setter injection DI  -->
+<!--        <property ref="jc" name="course"></property>-->
+
+ <!-- constrctor injection di       -->
+        <constructor-arg ref="sc" name="course"></constructor-arg>
+
+    </bean>
 
 </beans>
