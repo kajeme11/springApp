@@ -4,19 +4,36 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--  MANUAL wiring INJECTION
+      bean, property, constructor-arg
+
+   -->
     <!-- bean definitions here -->
 <!-- configuration xml file will create beans and pass the
    to IOC container to manage-->
 <!-- SpringFramework Create an instance of TargetCourse
   if id is not given referenced will be targetCourse -->
-    <bean id="sc" class="com.springApp.proj.service.courses.SpringCourse" />
+<!--    <bean id="sc" class="com.springApp.proj.service.courses.SpringCourse"  primary="true"/>-->
     <bean id="jc" class="com.springApp.proj.service.courses.JavaCourse" />
-    <bean id="tc" class="com.springApp.proj.service.TargetCourse">
-<!-- setter injection DI  -->
+<!--    Autowired by type, not MANUAL
+        It will inject one of the above beans but not both
+-->
+    <bean id="tc" class="com.springApp.proj.service.TargetCourse" autowire="constructor">
+
+<!--    <bean id="tc" class="com.springApp.proj.service.TargetCourse" autowire="constructor">-->
+<!-- setter injection DI
+     ref is a refrerence to the bean's id
+     name is a reference to the name of the variable used as an  argument in the constructor
+ -->
 <!--        <property ref="jc" name="course"></property>-->
 
- <!-- constrctor injection di       -->
-        <constructor-arg ref="sc" name="course"></constructor-arg>
+<!--  constrctor injection di
+      ref is a refrerence to the bean's id
+      name is a reference to the name of the variable used as an  argument in the constructor
+       name referes to the name used, not the type, type is inferred by the bean type
+       public TargetCourse(Course course)
+-->
+<!--        <constructor-arg ref="sc" name="course"></constructor-arg>-->
 
     </bean>
 

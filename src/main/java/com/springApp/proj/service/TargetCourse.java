@@ -7,14 +7,16 @@ public class TargetCourse {
 
     private Course course;
 
+    public TargetCourse(Course course){
+        super();
+        System.out.println("TargetCourse Bean has been created through constructor injection");
+        this.course = course;
+    }
+
     public TargetCourse(){
         System.out.println("TargetCourse Bean has been created through constructor injection");
     }
 
-    public TargetCourse(Course course){
-        System.out.println("TargetCourse Bean has been created through constructor injection");
-        this.course = course;
-    }
 
     public void setCourse(Course course){
         System.out.println("Course setter called");
@@ -22,6 +24,6 @@ public class TargetCourse {
     }
 
     public boolean getCourse(){
-        return course.purchasedCourse();
+        return this.course.purchasedCourse();
     }
 }

@@ -30,3 +30,17 @@ to IOC container to manage
 *ApplicatioContext, Eager initialization, asking to create all beans even if not needed
 
 *BeanFactory, Lazy initialization, Objects will not be created until they are going to be used
+
+
+setter injection DI:
+<property ref="jc" name="course"></property>
+
+constrctor injection di:
+<constructor-arg ref="sc" name="course"></constructor-arg>
+
+Autowire
+ <bean id="tc" class="com.springApp.proj.service.TargetCourse" autowire="byType">
+ <bean id="tc" class="com.springApp.proj.service.TargetCourse" autowire="">
+
+ SET PRIMARY AS TRUE TO LOSE AMBIGUITY
+ <bean id="sc" class="com.springApp.proj.service.courses.SpringCourse" primary="true" />
