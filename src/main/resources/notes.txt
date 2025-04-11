@@ -12,9 +12,14 @@ classes
 - Java Enterprise Development framework
 
 * Layered Approach:
-- Web Layer (Controller, servlet), responds to http requests
+- Web Layer (presentation) (Controller, servlet), responds to http requests
+@Controller, @RestController
 - Service Layer (Busines logic)
+@Service
 - Persistance Layer (DAO, intereact with db), uses JDBC or JPA Hibernate
+@Repository
+For configurations inside a class:
+@Configuration
 
 * Spring is a versitile framework, you can use many different
 modules to develop an end to end app
@@ -44,3 +49,10 @@ Autowire
 
  SET PRIMARY AS TRUE TO LOSE AMBIGUITY
  <bean id="sc" class="com.springApp.proj.service.courses.SpringCourse" primary="true" />
+
+
+ Spring Framework will create beans from component annotations:
+ The following are @Component and logic, their base is @Component:
+    @Service, @Repository, @Configuration, @Controller
+
+

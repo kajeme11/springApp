@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-    <bean id="sp" class="com.springApp.proj.service.courses.SpringCourse"/>
-    <bean id="jc" class="com.springApp.proj.service.courses.JavaCourse" />
-    <bean id="tc" class="com.springApp.proj.service.TargetCourse" >
+<!--  Inform Spring to follow Annotation approach  -->
+    <context:annotation-config />
 
-        <property ref="sp" name="course" > </property>
-
-    </bean>
+<!--  Scan classes under the base package   -->
+    <context:component-scan base-package="com.springApp" />
 
 
 
