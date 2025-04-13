@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-4.3.xsd">
-
+<!--No need for this file if we use @ComponentScan(base={"com.springApp"})-->
 <!--  Inform Spring to follow Annotation approach  -->
     <context:annotation-config />
 

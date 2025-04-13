@@ -2,9 +2,12 @@ package com.springApp.proj.config;
 
 import com.springApp.proj.model.Password;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Configuration
+@ComponentScan(basePackages = {"com.springApp"})
 public class AppConfig {
 
     public AppConfig(){
