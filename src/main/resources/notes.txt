@@ -55,4 +55,12 @@ Autowire
  The following are @Component and logic, their base is @Component:
     @Service, @Repository, @Configuration, @Controller
 
+Spring Bean Life cycle:
+-Java Object
+ -> Static Block - Gets executed without invoking automatically during class loading
+ -> Java instance block - Before body of constructor ,
+ Java initialization block is executed, then body of constructor
+ -> constructor - when you create an instance/object
+ -> method call - invoked for execution
+
 
