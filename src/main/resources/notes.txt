@@ -63,4 +63,8 @@ Spring Bean Life cycle:
  -> constructor - when you create an instance/object
  -> method call - invoked for execution
 
+ @PostConstruct
+ -execute after constructor is called
 
+ @PreDestroy
+-Destroy bean when called
